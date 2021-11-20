@@ -10,6 +10,8 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "test": "husky -v"
+    "test": "husky -v",
+    "client": "cd client && yarn start",
+    "server": "cd server && yarn start"
   }
 }

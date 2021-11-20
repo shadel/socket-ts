@@ -29,6 +29,9 @@ io.on("connection", (socket: Socket) => {
   socket.on("disconnect", () => {
     console.log("disconnect", socket.id);
   })
+  socket.on("test", (data) => {
+    console.log("test", socket.id, data);
+  })
 });
 
 app.get("/api", (req: express.Request, res: express.Response) => {

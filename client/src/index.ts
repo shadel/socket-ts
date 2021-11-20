@@ -4,11 +4,19 @@ import { pullToken } from "./token";
 
 async function main() {
   const token = await pullToken();
-  setupSocket({token});
+  setupSocket({token}, () => {
+    console.log(`Realtime is teminated!`)
+    run();
+  });
 }
 
-main().then(() => {
-  console.log(`Client start success!`);
-}).catch((err) => {
-  console.log(`Client start failed!`, err);
-});
+function run() {
+  main().then(() => {
+    console.log(`Client start success!`);
+  }).catch((err) => {
+    console.log(`Client start failed!`, err);
+  });
+  
+}
+
+run();

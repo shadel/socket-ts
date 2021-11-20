@@ -8,10 +8,12 @@ async function getToken(): Promise<string | undefined> {
 }
 export async function pullToken(): Promise<string> {
   try {
+    console.log(`GET TOKEN`)
     const token = await getToken();
     if (!token) {
       throw new Error(`Token empty`);
     }
+    console.log(`GET TOKEN SUSSESS`, token);
     return token;
   } catch (error) {
     console.log(`No token, retry`, error);

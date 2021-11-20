@@ -1,0 +1,15 @@
+{
+  "name": "socket-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:shadel/socket-ts.git",
+  "author": "trieu.vo <trieu.vo@insightus.com.au>",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^7.0.0"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "test": "husky -v"
+  }
+}

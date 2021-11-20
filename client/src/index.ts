@@ -1,5 +1,14 @@
-const greeting = (name: string): string => {
-  return `hello ${name}! How are you?`;
-};
+import { setupSocket } from "./socket";
+import { pullToken } from "./token";
 
-console.log(greeting("Joe"));
+
+async function main() {
+  const token = await pullToken();
+  setupSocket({token});
+}
+
+main().then(() => {
+  console.log(`Client start success!`);
+}).catch((err) => {
+  console.log(`Client start failed!`, err);
+});

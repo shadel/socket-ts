@@ -12,9 +12,10 @@
     "lint:fx": "eslint src/**/*.ts --fix",
     "lint": "eslint src/**/*.ts",
     "start": "tsc && node dist/index.js",
-    "server": "ts-node src/server.ts",
+    "server": "ts-node src/index.ts",
     "tsc": "tsc",
-    "tscCheck": "tsc --noEmit"
+    "tscCheck": "tsc --noEmit",
+    "test": "tsc -v"
   },
   "repository": {
     "type": "git",
@@ -53,6 +54,7 @@
     "*.{js,ts,json}": "prettier --write"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "socket.io": "^4.4.0"
   }
 }
